@@ -1,0 +1,152 @@
+.section_cadastro {
+    padding: 50px 0;
+}
+
+.section_cadastro--Dark {
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
+
+.section_cadastro--Light {
+    background-color: #CC3F55;
+    color: white;
+}
+
+.form_cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_cadastro h1 {
+    text-transform: uppercase;
+}
+
+.form_cadastro hr {
+    max-width: 300px;
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 5px;
+}
+
+.form_cadastro--Light hr {
+    border-color: #73061B;
+}
+
+.form_cadastro--Dark hr {
+    border-color: #1e1e1e;
+}
+
+.campos_cadastro {
+    display: flex;
+    padding-top: 60px;
+
+    gap: 25px;
+
+    align-items: flex-end;
+}
+
+
+/* modificando o input e select */
+.campo_cad_nome input,
+.campo_cad_genero select,
+.campo_cad_genero input {
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 5px;
+    width: 300px;
+    height: 30px;
+
+    box-shadow: 1px 4px 4px 0px #00000045;
+
+    margin-top: 7px;
+    text-align: center;
+}
+
+.input_image {
+    background-color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label_image {
+    width: 300px;
+    height: 30px;
+
+    border: none;
+    border-radius: 6px;
+    outline: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label_image--Light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.label_image--Dark {
+    background-color: #292929;
+    color: #ffffff;
+}
+
+.campo_cad_genero select>option {
+    color: #8b8b8b;
+}
+
+.campo_cad_genero input {
+    color: #8b8b8b;
+}
+
+.campo_cad_genero--Dark select {
+    background-color: #292929;
+    color: white;
+}
+
+.campo_cad_nome--Light input {
+    background-color: #ffffff;
+}
+
+.campo_cad_nome--Dark input {
+    background-color: #292929;
+    color: white;
+}
+
+
+.campo_cad_genero,
+.campo_cad_nome {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 880px) {
+    .campos_cadastro {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .form_cadastro h1 {
+        font-size: 20px;
+    }
+}
+
+.botao_cancelar {
+    /* padding: 5px 100px; */
+    width: 200px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffe100;
+    color: #73061B;
+    border-radius: 6px;
+    /* Negrito */
+    font-weight: bolder;
+}
