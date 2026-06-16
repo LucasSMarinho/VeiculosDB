@@ -8,7 +8,8 @@ function Header() {
       <header> 
          <Image src={Logovectra} alt="Logo do Vectra" width={130} />
         <nav>
-          <Link href="/veiculos"></Link>
+          <Link href="/veiculos">Veiculos</Link>
+          <Link href="/tipoVeiculos">Tipo Veiculo</Link>
         </nav>
       </header>
   );

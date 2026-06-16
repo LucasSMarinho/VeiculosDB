@@ -10,17 +10,7 @@
     align-items: center;
 
     padding: 40px 0;
-}
-
-.listagem--Dark
-{
-    background-color: rgb(27, 27, 27);
     color: white;   
-}
-
-.listagem-Light
-{
-    background-color: rgb(255, 255, 255);
 }
 
 .listagem h1{
@@ -116,4 +106,6 @@
     width: 140px;
 
     border-radius: 3px;
+
+    display: inline-block !important;
 }

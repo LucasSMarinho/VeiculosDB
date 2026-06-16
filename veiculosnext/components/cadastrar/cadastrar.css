@@ -50,8 +50,8 @@
 
 /* modificando o input e select */
 .campo_cad_nome input,
-.campo_cad_genero select,
-.campo_cad_genero input {
+.campo_cad_tipoVeiculo select,
+.campo_cad_tipoVeiculo input {
     border: none;
     border-radius: 6px;
     outline: none;
@@ -96,15 +96,15 @@
     color: #ffffff;
 }
 
-.campo_cad_genero select>option {
+.campo_cad_tipoVeiculo select>option {
     color: #8b8b8b;
 }
 
-.campo_cad_genero input {
+.campo_cad_tipoVeiculo input {
     color: #8b8b8b;
 }
 
-.campo_cad_genero--Dark select {
+.campo_cad_tipoVeiculo--Dark select {
     background-color: #292929;
     color: white;
 }
@@ -119,7 +119,7 @@
 }
 
 
-.campo_cad_genero,
+.campo_cad_tipoVeiculo,
 .campo_cad_nome {
     display: flex;
     flex-direction: column;

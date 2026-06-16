@@ -27,7 +27,7 @@ const TipoVeiculos = () => {
 
   const funcGet = async () => {
     try {
-      const response = await api.get('/tipoVeiculo');
+      const response = await api.get('/TipoVeiculo');
 
       console.log(response.data);
 
@@ -46,7 +46,7 @@ const TipoVeiculos = () => {
         titulo: valor
       }
 
-      const response = await api.post('/tipoVeiculo', novoTipoVeiculo)
+      const response = await api.post('/TipoVeiculo', novoTipoVeiculo)
       console.log(response)
       funcGet()
     }
@@ -61,7 +61,7 @@ const TipoVeiculos = () => {
     console.log(item.titulo)
 
     setItemEditar(item)
-    setValor(item.titulo)
+    setValor(item.nome)
     setEditar(true)
   }
 
@@ -76,7 +76,7 @@ const TipoVeiculos = () => {
          
       setEditar(true)
 
-      const response = await api.put(`/tipoVeiculo/${itemEditar.idtipoVeiculo}`, novoTipoVeiculo)
+      const response = await api.put(`/TipoVeiculo/${itemEditar.idtipoVeiculo}`, novoTipoVeiculo)
       console.log(response)
       funcGet()
     }
@@ -88,11 +88,17 @@ const TipoVeiculos = () => {
   //DELETE
 
   const funcDelete = async(item: any) => {
-    try{
+   try{
+
+      console.log(item) 
+
+
       if(!item)
         return
+        
+      
 
-      const response = await api.delete(`/tipoVeiculo/${item.idtipoVeiculo}`)
+      const response = await api.delete(`/TipoVeiculo/${item.idTipoVeiculo}`)
       console.log(response)
       funcGet()
     }

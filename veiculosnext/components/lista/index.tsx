@@ -43,13 +43,13 @@ const Lista = (props : ListaProps) => {
                             {props.lista && props.lista.length > 0 ? (
                                 // Se houver itens, faz um map (laço) para renderizar cada item da lista
                                 props.lista.map((item : any) => (
-                                        <tr className="item_lista" key={(props.tipoLista == "veiculo") ? item.idveiculo : item.idtipoVeiculo}>
+                                        <tr className="item_lista" key={(props.tipoLista == "veiculo") ? item.idVeiculo : item.idTipoVeiculo}>
                                         {/* {console.log(index)} */}
                                         {/* {console.log(item.idtipoVeiculo)} */}
                                         <td data-cell="Imagem" style={{ display: props.visibilidade }}>
                                             {/* Segunda célula: mostra o nome do gênero caso o tipo da lista seja "veiculo".*/}
                                             {/* adicionar essa linha depois de fazer o metd de lista veiculo: */}
-                                            <img className="img_cartaz" src={(`https://localhost:7134/imagens/${item.imagem}` == `https://localhost:7134/imagens/` || `https://localhost:7134/imagens/${item.imagem}` == `https://localhost:7134/imagens/null` || `https://localhost:7134/imagens/${item.imagem}` == `https://localhost:7134/imagens/undefined`) ? faltadecartaz.src : `https://localhost:7134/imagens/${item.imagem}` } alt="" />
+                                            <img className="img_cartaz" src={(`https://localhost:7033/imagens/${item.imagem}` == `https://localhost:7033/imagens/` || `https://localhost:7033/imagens/${item.imagem}` == `https://localhost:7033/imagens/null` || `https://localhost:7033/imagens/${item.imagem}` == `https://localhost:7033/imagens/undefined`) ? faltadecartaz.src : `https://localhost:7033/imagens/${item.imagem}` } alt="" />
                                         </td>
                                         <td data-cell="Nome">
                                             {/* Primeira célula da linha: mostra o nome (se for gênero) ou título (se for veiculo) */}
@@ -59,7 +59,7 @@ const Lista = (props : ListaProps) => {
                                         <td data-cell="Gênero" style={{ display: props.visibilidade }}>
                                             {/* Segunda célula: mostra o nome do gênero caso o tipo da lista seja "veiculo".*/}
                                             {/* adicionar essa linha depois de fazer o metd de lista veiculo: */}
-                                            {props.tipoLista === "veiculo" ? (item.idtipoVeiculoNavigation?.nome || '-') : '-'}
+                                            {props.tipoLista === "veiculo" ? (item.idTipoVeiculoNavigation?.titulo || '-') : '-'}
                                         </td>
                                         <td data-cell="Editar">
                                             <button className="icon" onClick={() => props.funcEditar(item)}>
