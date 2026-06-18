@@ -1,19 +1,19 @@
-.listagem{
+.listagem {
     /* vamos retirar:
         header: 75px
         cadastro: 252px
         footer: 40px */
-    min-height: calc(100vh  - (75px + 252px + 40px));
+    min-height: calc(100vh - (75px + 252px + 40px));
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
     padding: 40px 0;
-    color: white;   
+    color: white;
 }
 
-.listagem h1{
+.listagem h1 {
     text-transform: uppercase;
 }
 
@@ -22,38 +22,38 @@
     width: 100%;
     border-style: solid;
     border-width: 1px;
-    border-color: #73061B;
+    border-color: #ff751f;
     margin-top: 5px;
 }
 
 
 
-.tabela{
+.tabela {
     width: 100%;
     margin-top: 30px;
-} 
+}
 
-.tabela table{
+.tabela table {
     width: 100%;
 
     border-collapse: collapse;
 }
 
-.tabela .table_cabecalho :first-child{
+.tabela .table_cabecalho :first-child {
     width: 300px;
 }
 
-.tabela  .table_cabecalho :nth-child(2){
+.tabela .table_cabecalho :nth-child(2) {
     width: 200px;
 }
 
-.tabela  .table_cabecalho th{
+.tabela .table_cabecalho th {
     width: 100px;
 }
 
-.item_lista td{
+.item_lista td {
     /* desgrudar o item do titulo */
-     padding: 20px 0 10px 0;
+    padding: 20px 0 10px 0;
 }
 
 .item_lista {
@@ -62,50 +62,149 @@
     border-bottom: solid 1px #73061B20;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
+
     /* 1px - 768px */
-    .tabela thead{
+    .tabela thead {
         display: none;
     }
 
     /* Um elemento abaixo do outro: */
-    .item_lista td{
+    .item_lista td {
         display: grid;
         text-align: left;
         padding: 10px 10px 10px 0;
         grid-template-columns: 10ch auto;
     }
 
-    .item_lista td::before{
-          /* Adiciona o data-cell do html e coloca os : depois */
+    .item_lista td::before {
+        /* Adiciona o data-cell do html e coloca os : depois */
         content: attr(data-cell) ":";
         font-weight: 700;
         width: 80px;
         text-align: left;
     }
 
-    .item_lista td:last-child{
+    .item_lista td:last-child {
         margin-bottom: 24px;
     }
 
-    .item_lista td:first-child{
+    .item_lista td:first-child {
         margin-top: 24px;
     }
 }
 
 
-.icon{
+.icon {
     border: none;
     background: none;
     width: fit-content;
 }
 
-.img_cartaz
-{
+.img_cartaz {
     height: 240px;
-    width: 140px;
+    width: 360px;
 
     border-radius: 3px;
 
     display: inline-block !important;
+}
+
+.tabela-cards {
+    width: 100%;
+}
+
+.tabela-cards table {
+    display: block;
+    width: 100%;
+}
+
+.tabela-cards table tbody.lista_cards {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 0;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.tabela-cards table tbody.lista_cards::-webkit-scrollbar {
+    height: 8px;
+}
+
+.tabela-cards table tbody.lista_cards::-webkit-scrollbar-thumb {
+    background: rgba(255, 117, 31, 0.6);
+    border-radius: 999px;
+}
+
+.card_lista {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    max-width: 360px;
+    gap: 12px;
+    margin: 0;
+    padding: 16px;
+    background-color: #0b0f1a;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card_lista td {
+    display: block;
+    padding: 0;
+    text-align: left;
+    color: white;
+}
+
+.card_lista td[data-cell="Imagem"] {
+    padding-bottom: 12px;
+}
+
+.card_lista td[data-cell="Nome"],
+.card_lista td[data-cell="Tipo"],
+.card_lista td[data-cell="Editar"],
+.card_lista td[data-cell="Excluir"] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card_lista td[data-cell="Nome"]::before,
+.card_lista td[data-cell="Tipo"]::before {
+    content: attr(data-cell) ":";
+    font-weight: 700;
+    margin-right: 8px;
+    color: #ff751f;
+}
+
+.card_lista td[data-cell="Editar"] button,
+.card_lista td[data-cell="Excluir"] button {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: #ff751f;
+    color: #0b0f1a;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.card_lista td[data-cell="Editar"] button:hover,
+.card_lista td[data-cell="Excluir"] button:hover {
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+    .tabela-cards table tbody.lista_cards {
+        gap: 14px;
+    }
+
+    .card_lista {
+        min-width: 280px;
+        max-width: 320px;
+    }
 }

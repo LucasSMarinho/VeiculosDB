@@ -14,6 +14,8 @@ interface ListaProps {
 
   funcEditar: (item : any) => void;
   funcExcluir: (item : any) => void;
+
+  listaTipoVeiculo?: any[];
 }
 
 const Lista = (props : ListaProps) => {
@@ -23,7 +25,11 @@ const Lista = (props : ListaProps) => {
 
                 <h1>{props.tituloLista}</h1>
                 <hr />
-                <div className="tabela">
+                
+                {props.tipoLista == "tipoVeiculo" ? 
+                (
+
+                <div className="tabela tabela-tipoveiculos">
                     <table>
                         {/* cabeçalho da tabela: */}
                         <thead>
@@ -32,13 +38,13 @@ const Lista = (props : ListaProps) => {
                                 {/* th => table head */}
                                 <th style={{ display: props.visibilidade }}>Imagem</th>
                                 <th>Nome</th>
-                                <th style={{ display: props.visibilidade }}>Gênero</th>
+                                <th style={{ display: props.visibilidade }}>Tipo</th>
                                 <th>Editar</th>
                                 <th>Excluir</th>
                             </tr>
                         </thead>
                         {/* tbody => corpo da tabela */}
-                        <tbody>
+                        <tbody >
                             {/* Verifica se a lista existe e tem itens */}
                             {props.lista && props.lista.length > 0 ? (
                                 // Se houver itens, faz um map (laço) para renderizar cada item da lista
@@ -56,7 +62,7 @@ const Lista = (props : ListaProps) => {
                                             {/* titulo == veiculo */}
                                             {props.tipoLista === "tipoVeiculo" ? item.titulo : item.nome}
                                         </td>
-                                        <td data-cell="Gênero" style={{ display: props.visibilidade }}>
+                                        <td data-cell="Tipo" style={{ display: props.visibilidade }}>
                                             {/* Segunda célula: mostra o nome do gênero caso o tipo da lista seja "veiculo".*/}
                                             {/* adicionar essa linha depois de fazer o metd de lista veiculo: */}
                                             {props.tipoLista === "veiculo" ? (item.idTipoVeiculoNavigation?.titulo || '-') : '-'}
@@ -72,6 +78,7 @@ const Lista = (props : ListaProps) => {
                                             </button>
                                         </td>
                                     </tr>
+                    
                                 ))
                             ) : (
                                 // Caso a lista esteja vazia ou não exista, mostra uma linha dizendo que não há registros
@@ -85,6 +92,68 @@ const Lista = (props : ListaProps) => {
                         </tbody>
                     </table>
                 </div>
+                ) 
+                : 
+                (
+                <div className="tabela tabela-cards">
+                    <table>
+                        {/* tbody => corpo da tabela */}
+                        
+                            {/* Verifica se a lista existe e tem itens */}
+
+                            {props.listaTipoVeiculo && props.listaTipoVeiculo.length > 0 && props.lista && props.lista.length > 0 ? (
+                                props.listaTipoVeiculo.map((tipo: any) => {
+                                    const itensDoTipo = props.lista.filter((item) => item.idTipoVeiculo === tipo.idTipoVeiculo);
+
+                                    if (!itensDoTipo.length) {
+                                        return null;
+                                    }
+
+                                    return (
+                                        <tbody key={tipo.idTipoVeiculo} className="lista_cards">
+                                            {itensDoTipo.map((item: any) => (
+                                                <tr className="card_lista" key={(props.tipoLista == "veiculo") ? item.idVeiculo : item.idTipoVeiculo}>
+                                                    <td data-cell="Imagem" style={{ display: props.visibilidade }}>
+                                                        <img className="img_cartaz" src={(`https://localhost:7033/imagens/${item.imagem}` == `https://localhost:7033/imagens/` || `https://localhost:7033/imagens/${item.imagem}` == `https://localhost:7033/imagens/null` || `https://localhost:7033/imagens/${item.imagem}` == `https://localhost:7033/imagens/undefined`) ? faltadecartaz.src : `https://localhost:7033/imagens/${item.imagem}` } alt="" />
+                                                    </td>
+                                                
+                                                    <td data-cell="Nome">
+                                                        {props.tipoLista === "tipoVeiculo" ? item.titulo : item.nome}
+                                                    </td>
+                                                    <td data-cell="Tipo" style={{ display: props.visibilidade }}>
+                                                        {props.tipoLista === "veiculo" ? (item.idTipoVeiculoNavigation?.titulo || '-') : '-'}
+                                                    </td>
+                                                    <td data-cell="Editar">
+                                                        <button className="icon" onClick={() => props.funcEditar(item)}>
+                                                            Editar
+                                                        </button>
+                                                    </td>
+                                                    <td data-cell="Excluir">
+                                                        <button className="icon" onClick={() => props.funcExcluir(item)}>
+                                                             Excluir
+                                                        </button>
+                                                    </td>
+                                                    
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    );
+                                })
+                            ) : (
+                                <tbody>
+                                    <tr key="nenhum-cadastro">
+                                        <td>Nenhum registro encontrado.</td>
+                                    </tr>
+                                </tbody>
+                            )
+                            }
+
+
+                        
+                    </table>
+                </div>
+            )}
+
             </div>
         </section>
     )

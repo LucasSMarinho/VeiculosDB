@@ -8,7 +8,7 @@
 }
 
 .section_cadastro--Light {
-    background-color: #CC3F55;
+    background-color: orange;
     color: white;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .form_cadastro--Light hr {
-    border-color: #73061B;
+    border-color: #ff751f;
 }
 
 .form_cadastro--Dark hr {
@@ -84,6 +84,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-color: #ff751f
 }
 
 .label_image--Light {
@@ -144,8 +146,8 @@
     height: 30px;
     border: none;
     cursor: pointer;
-    background-color: #ffe100;
-    color: #73061B;
+    background-color: #ff751f;
+    color: white;
     border-radius: 6px;
     /* Negrito */
     font-weight: bolder;

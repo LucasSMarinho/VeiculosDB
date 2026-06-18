@@ -195,6 +195,7 @@ const Veiculos = () => {
         tipoLista='veiculo'
         visibilidade=''
         funcEditar={funcPrePut}
+        listaTipoVeiculo={listaTipoVeiculo}
         funcExcluir={funcDelete}
       />
       <Footer />
