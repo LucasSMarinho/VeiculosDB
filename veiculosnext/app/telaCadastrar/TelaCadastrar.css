@@ -9,7 +9,7 @@
 /* Banner da esquerda: */
 .banner{
  
-    background-image: url("../public/CarroComDetalhe.png");
+    background-image: url("../../public/CarroComDetalhe.png");
     flex: 1;
 
     /* Modificar algumas caracteristicas da imagem: */
