@@ -4,4 +4,37 @@ header
     width: 100%;
 
     height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header > section
+{
+  display: flex;
+  gap: 70px;
+}
+
+header > section > nav
+{
+  display: flex;
+   gap: 70px;
+}
+
+header > section > div
+{
+  display: flex;
+  gap: 10px;
+}
+
+.Butao_Sair
+{
+  display: flex;
+  gap: 10px;
+}
+
+.Butao_Sair :hover
+{
+  cursor: pointer;
 }

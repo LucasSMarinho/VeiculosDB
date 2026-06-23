@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import {UsuarioProvider} from '@/context/UsuarioProvider'
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -13,7 +14,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`}>
+
+         <UsuarioProvider>
+        {children}
+         </UsuarioProvider>
+
+        </body>
     </html>
   );
 }
