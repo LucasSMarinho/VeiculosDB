@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\lucas\\OneDrive\\Desktop\\VeiculosDB\\Ve\u00EDculo.WebAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{34E3B1AC-4FA8-C4D9-6499-28894D6F8FD4}|Ve\u00EDculo\\Ve\u00EDculo.csproj|c:\\users\\lucas\\onedrive\\desktop\\veiculosdb\\ve\u00EDculo.webapi\\ve\u00EDculo\\repositories\\tipoveiculorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34E3B1AC-4FA8-C4D9-6499-28894D6F8FD4}|Ve\u00EDculo\\Ve\u00EDculo.csproj|solutionrelative:ve\u00EDculo\\repositories\\tipoveiculorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34E3B1AC-4FA8-C4D9-6499-28894D6F8FD4}|Ve\u00EDculo\\Ve\u00EDculo.csproj|c:\\users\\lucas\\onedrive\\desktop\\veiculosdb\\ve\u00EDculo.webapi\\ve\u00EDculo\\repositories\\veiculorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34E3B1AC-4FA8-C4D9-6499-28894D6F8FD4}|Ve\u00EDculo\\Ve\u00EDculo.csproj|solutionrelative:ve\u00EDculo\\repositories\\veiculorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{34E3B1AC-4FA8-C4D9-6499-28894D6F8FD4}|Ve\u00EDculo\\Ve\u00EDculo.csproj|c:\\users\\lucas\\onedrive\\desktop\\veiculosdb\\ve\u00EDculo.webapi\\ve\u00EDculo\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34E3B1AC-4FA8-C4D9-6499-28894D6F8FD4}|Ve\u00EDculo\\Ve\u00EDculo.csproj|solutionrelative:ve\u00EDculo\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{34E3B1AC-4FA8-C4D9-6499-28894D6F8FD4}|Ve\u00EDculo\\Ve\u00EDculo.csproj|c:\\users\\lucas\\onedrive\\desktop\\veiculosdb\\ve\u00EDculo.webapi\\ve\u00EDculo\\controllers\\veiculocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34E3B1AC-4FA8-C4D9-6499-28894D6F8FD4}|Ve\u00EDculo\\Ve\u00EDculo.csproj|solutionrelative:ve\u00EDculo\\controllers\\veiculocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34E3B1AC-4FA8-C4D9-6499-28894D6F8FD4}|Ve\u00EDculo\\Ve\u00EDculo.csproj|c:\\users\\lucas\\onedrive\\desktop\\veiculosdb\\ve\u00EDculo.webapi\\ve\u00EDculo\\repositories\\veiculorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34E3B1AC-4FA8-C4D9-6499-28894D6F8FD4}|Ve\u00EDculo\\Ve\u00EDculo.csproj|solutionrelative:ve\u00EDculo\\repositories\\veiculorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{34E3B1AC-4FA8-C4D9-6499-28894D6F8FD4}|Ve\u00EDculo\\Ve\u00EDculo.csproj|c:\\users\\lucas\\onedrive\\desktop\\veiculosdb\\ve\u00EDculo.webapi\\ve\u00EDculo\\interfaces\\iveiculorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{34E3B1AC-4FA8-C4D9-6499-28894D6F8FD4}|Ve\u00EDculo\\Ve\u00EDculo.csproj|c:\\users\\lucas\\onedrive\\desktop\\veiculosdb\\ve\u00EDculo.webapi\\ve\u00EDculo\\models\\tipoveiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34E3B1AC-4FA8-C4D9-6499-28894D6F8FD4}|Ve\u00EDculo\\Ve\u00EDculo.csproj|solutionrelative:ve\u00EDculo\\models\\tipoveiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34E3B1AC-4FA8-C4D9-6499-28894D6F8FD4}|Ve\u00EDculo\\Ve\u00EDculo.csproj|c:\\users\\lucas\\onedrive\\desktop\\veiculosdb\\ve\u00EDculo.webapi\\ve\u00EDculo\\repositories\\tipoveiculorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34E3B1AC-4FA8-C4D9-6499-28894D6F8FD4}|Ve\u00EDculo\\Ve\u00EDculo.csproj|solutionrelative:ve\u00EDculo\\repositories\\tipoveiculorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{34E3B1AC-4FA8-C4D9-6499-28894D6F8FD4}|Ve\u00EDculo\\Ve\u00EDculo.csproj|c:\\users\\lucas\\onedrive\\desktop\\veiculosdb\\ve\u00EDculo.webapi\\ve\u00EDculo\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -102,18 +102,6 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TipoVeiculo.cs",
-              "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\Desktop\\VeiculosDB\\Ve\u00EDculo.WebAPI\\Ve\u00EDculo\\Models\\TipoVeiculo.cs",
-              "RelativeDocumentMoniker": "Ve\u00EDculo\\Models\\TipoVeiculo.cs",
-              "ToolTip": "C:\\Users\\lucas\\OneDrive\\Desktop\\VeiculosDB\\Ve\u00EDculo.WebAPI\\Ve\u00EDculo\\Models\\TipoVeiculo.cs",
-              "RelativeToolTip": "Ve\u00EDculo\\Models\\TipoVeiculo.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-16T16:15:58.061Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 12,
               "Title": "UsuarioController.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\Desktop\\VeiculosDB\\Ve\u00EDculo.WebAPI\\Ve\u00EDculo\\Controllers\\UsuarioController.cs",
@@ -126,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "IVeiculoRepository.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\Desktop\\VeiculosDB\\Ve\u00EDculo.WebAPI\\Ve\u00EDculo\\Interfaces\\IVeiculoRepository.cs",
               "RelativeDocumentMoniker": "Ve\u00EDculo\\Interfaces\\IVeiculoRepository.cs",
@@ -138,7 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "VeiculoController.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\Desktop\\VeiculosDB\\Ve\u00EDculo.WebAPI\\Ve\u00EDculo\\Controllers\\VeiculoController.cs",
               "RelativeDocumentMoniker": "Ve\u00EDculo\\Controllers\\VeiculoController.cs",
@@ -162,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\Desktop\\VeiculosDB\\Ve\u00EDculo.WebAPI\\Ve\u00EDculo\\Program.cs",
               "RelativeDocumentMoniker": "Ve\u00EDculo\\Program.cs",
@@ -174,7 +162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\Desktop\\VeiculosDB\\Ve\u00EDculo.WebAPI\\Ve\u00EDculo\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Ve\u00EDculo\\Controllers\\LoginController.cs",
@@ -187,19 +175,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "TipoVeiculoRepository.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\Desktop\\VeiculosDB\\Ve\u00EDculo.WebAPI\\Ve\u00EDculo\\Repositories\\TipoVeiculoRepository.cs",
               "RelativeDocumentMoniker": "Ve\u00EDculo\\Repositories\\TipoVeiculoRepository.cs",
               "ToolTip": "C:\\Users\\lucas\\OneDrive\\Desktop\\VeiculosDB\\Ve\u00EDculo.WebAPI\\Ve\u00EDculo\\Repositories\\TipoVeiculoRepository.cs",
               "RelativeToolTip": "Ve\u00EDculo\\Repositories\\TipoVeiculoRepository.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAowAQAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAlwB8AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T21:28:39.318Z"
+              "WhenOpened": "2026-06-15T21:28:39.318Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Veiculo.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\Desktop\\VeiculosDB\\Ve\u00EDculo.WebAPI\\Ve\u00EDculo\\Models\\Veiculo.cs",
               "RelativeDocumentMoniker": "Ve\u00EDculo\\Models\\Veiculo.cs",
@@ -208,6 +197,31 @@
               "ViewState": "AgIAAAoAAAAAAAAAAAAAABoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-16T17:00:37.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VeiculoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\Desktop\\VeiculosDB\\Ve\u00EDculo.WebAPI\\Ve\u00EDculo\\Repositories\\VeiculoRepository.cs",
+              "RelativeDocumentMoniker": "Ve\u00EDculo\\Repositories\\VeiculoRepository.cs",
+              "ToolTip": "C:\\Users\\lucas\\OneDrive\\Desktop\\VeiculosDB\\Ve\u00EDculo.WebAPI\\Ve\u00EDculo\\Repositories\\VeiculoRepository.cs",
+              "RelativeToolTip": "Ve\u00EDculo\\Repositories\\VeiculoRepository.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAqwAsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T21:27:15.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TipoVeiculo.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\Desktop\\VeiculosDB\\Ve\u00EDculo.WebAPI\\Ve\u00EDculo\\Models\\TipoVeiculo.cs",
+              "RelativeDocumentMoniker": "Ve\u00EDculo\\Models\\TipoVeiculo.cs",
+              "ToolTip": "C:\\Users\\lucas\\OneDrive\\Desktop\\VeiculosDB\\Ve\u00EDculo.WebAPI\\Ve\u00EDculo\\Models\\TipoVeiculo.cs",
+              "RelativeToolTip": "Ve\u00EDculo\\Models\\TipoVeiculo.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T16:15:58.061Z"
             },
             {
               "$type": "Document",
@@ -223,19 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "VeiculoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\Desktop\\VeiculosDB\\Ve\u00EDculo.WebAPI\\Ve\u00EDculo\\Repositories\\VeiculoRepository.cs",
-              "RelativeDocumentMoniker": "Ve\u00EDculo\\Repositories\\VeiculoRepository.cs",
-              "ToolTip": "C:\\Users\\lucas\\OneDrive\\Desktop\\VeiculosDB\\Ve\u00EDculo.WebAPI\\Ve\u00EDculo\\Repositories\\VeiculoRepository.cs",
-              "RelativeToolTip": "Ve\u00EDculo\\Repositories\\VeiculoRepository.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAowAsAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T21:27:15.312Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "UsuarioRepository.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\Desktop\\VeiculosDB\\Ve\u00EDculo.WebAPI\\Ve\u00EDculo\\Repositories\\UsuarioRepository.cs",
               "RelativeDocumentMoniker": "Ve\u00EDculo\\Repositories\\UsuarioRepository.cs",

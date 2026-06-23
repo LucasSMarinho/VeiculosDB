@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { UsuarioContext } from "./UsuarioContext";
+import { jwtDecode } from "jwt-decode";
 
 export const UsuarioProvider = ({ children }) => {
   const [usuario, setUsuario] = useState("");
@@ -10,8 +11,11 @@ export const UsuarioProvider = ({ children }) => {
   useEffect(() => {
     const tokenStorage = window.localStorage.getItem("token");
 
-    if (tokenStorage && tokenStorage !== "undefined") {
-      setToken(tokenStorage);
+      if (tokenStorage && tokenStorage !== "undefined") {
+    setToken(tokenStorage);
+
+    const decoded = jwtDecode(tokenStorage);
+    setUsuario(decoded);
     }
   }, []);
 

@@ -59,7 +59,7 @@
 .item_lista {
     text-align: center;
 
-    border-bottom: solid 1px #73061B20;
+    border-bottom: solid 1px #73320620;
 }
 
 @media screen and (max-width: 768px) {
@@ -207,4 +207,11 @@
         min-width: 280px;
         max-width: 320px;
     }
+}
+
+
+.centralizar
+{
+    display: flex;
+    justify-content: center;
 }

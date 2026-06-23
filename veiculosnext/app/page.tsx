@@ -42,6 +42,7 @@ const checarToken = (token : any) => {
     try {
         const decodedToken = jwtDecode(token)
         setUsuario(decodedToken)  
+        console.log(usuario)
 
         router.push("/veiculos")
     } catch (error) {
@@ -64,7 +65,7 @@ const checarToken = (token : any) => {
             const response = await api.post('/Login', objLogin);
             const tokenObtido = response.data.token;
             
-            console.log("Token recebido:", tokenObtido);
+            document.cookie = `auth_token=${tokenObtido}; path=/`;
             setToken(tokenObtido);
             localStorage.setItem("token", tokenObtido);
 

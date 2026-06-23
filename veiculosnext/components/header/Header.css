@@ -10,8 +10,31 @@ header
     justify-content: space-around;
 }
 
-header > nav
+header > section
 {
   display: flex;
-  gap: 40px;
+  gap: 70px;
+}
+
+header > section > nav
+{
+  display: flex;
+   gap: 70px;
+}
+
+header > section > div
+{
+  display: flex;
+  gap: 10px;
+}
+
+.Butao_Sair
+{
+  display: flex;
+  gap: 10px;
+}
+
+.Butao_Sair :hover
+{
+  cursor: pointer;
 }

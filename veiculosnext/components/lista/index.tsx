@@ -4,6 +4,7 @@ import "./Lista.css";
 import Editar from "../../public/pen-to-square-solid.svg";
 import Excluir from "../../public/trash-can-regular.svg";
 import faltadecartaz from "../../public/faltadecartaz.jpg"
+import Visualizar from "../../public/Eye.svg"
 import Image from "next/image";
 
 interface ListaProps {
@@ -14,6 +15,7 @@ interface ListaProps {
 
   funcEditar: (item : any) => void;
   funcExcluir: (item : any) => void;
+  funcResumo?: (item : any) => void;
 
   listaTipoVeiculo?: any[];
 }
@@ -30,21 +32,27 @@ const Lista = (props : ListaProps) => {
                 (
 
                 <div className="tabela tabela-tipoveiculos">
-                    <table>
+                    <table >
                         {/* cabeçalho da tabela: */}
                         <thead>
                             {/* tr => table row */}
                             <tr className="table_cabecalho">
                                 {/* th => table head */}
+                                {props.lista && props.lista.length > 0 ? 
+                                (
+                                <>
                                 <th style={{ display: props.visibilidade }}>Imagem</th>
                                 <th>Nome</th>
                                 <th style={{ display: props.visibilidade }}>Tipo</th>
                                 <th>Editar</th>
                                 <th>Excluir</th>
+                                </>
+                            )
+                                 : (<></>)}
                             </tr>
                         </thead>
+                            <tbody className={props.lista && props.lista.length > 0 ? "" : "centralizar"}>
                         {/* tbody => corpo da tabela */}
-                        <tbody >
                             {/* Verifica se a lista existe e tem itens */}
                             {props.lista && props.lista.length > 0 ? (
                                 // Se houver itens, faz um map (laço) para renderizar cada item da lista
@@ -128,6 +136,13 @@ const Lista = (props : ListaProps) => {
                                                             Editar
                                                         </button>
                                                     </td>
+                                                    {props.funcResumo && (
+                                                     <td data-cell="Vizualizar">
+                                                     <button className="icon" onClick={() => (props.funcResumo?.(item))}>
+                                                     <Image src={Visualizar} alt="Olho" width={50}/>
+                                                    </button>
+                                                   </td>
+                                                    )}
                                                     <td data-cell="Excluir">
                                                         <button className="icon" onClick={() => props.funcExcluir(item)}>
                                                              Excluir
@@ -140,7 +155,7 @@ const Lista = (props : ListaProps) => {
                                     );
                                 })
                             ) : (
-                                <tbody>
+                                <tbody className="centralizar">
                                     <tr key="nenhum-cadastro">
                                         <td>Nenhum registro encontrado.</td>
                                     </tr>

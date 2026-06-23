@@ -8,7 +8,11 @@ import api from '@/services/services'
 import Lista from '@/components/lista/index';
 import { useState } from 'react';
 import { useEffect } from 'react';
-
+import { useContext } from 'react';
+import { UsuarioContext } from '@/context/UsuarioContext';
+import { useRouter } from 'next/navigation';
+import { gerarResumo } from "@/services/IAServices";
+import Swal from 'sweetalert2';
 
 //Server Component x Client Component
 // Um componente client e gerado no lado do cliente da tela
@@ -33,6 +37,7 @@ interface Veiculo {
 
 const Veiculos = () => {
 
+  const { token, setToken } = useContext(UsuarioContext)
   const [showLoading, setShowLoading] = useState(false)
   const [valor, setValor] = useState("")
   const [imagem, setImagem] = useState<File | null>(null)
@@ -41,7 +46,8 @@ const Veiculos = () => {
   const [listaTipoVeiculo, setListaTipoVeiculo] = useState<TipoVeiculo[]>([]);
   const [tipoVeiculoSelecionado, setTipoVeiculoSelecionado] = useState("")
   const [listaVeiculo, setListaVeiculo] = useState<Veiculo[]>([]);
-
+  const [resumo, setResumo] = useState("");
+  const router = useRouter()
 
   useEffect(() => {
     funcGet();
@@ -49,7 +55,11 @@ const Veiculos = () => {
   }, []);
 
 
-
+  useEffect(() => {
+    if (!token) {
+      router.push("/");
+    }
+  }, [token]);
 
   //GET
 
@@ -82,14 +92,30 @@ const Veiculos = () => {
   //POST
 
   const funcPost = async () => {
+    if (valor.trim().length == 0) {
+          Swal.fire({
+            title: "Preencha os valores corretamente",
+            text: "O veiculo deve ser preenchido antes de ser cadastrado!",
+            icon: "warning",
+            background: "#121826",
+            confirmButtonText: "Ok",
+            confirmButtonColor: "#ff751f",
+            color: "white",
+            iconColor: "#ff751f"
+          })
+    
+          return false
+    
+        }
+
     try {
 
-      if(!imagem)
+      if (!imagem)
         return
- 
+
 
       const formData = new FormData()
-     
+
       formData.append("Nome", valor)
       formData.append("idTipoVeiculo", tipoVeiculoSelecionado)
       formData.append("Imagem", imagem)
@@ -100,9 +126,31 @@ const Veiculos = () => {
       const response = await api.post('/Veiculo', formData)
       console.log(response)
       funcGet()
+
+      Swal.fire({
+        title: "Veiculo cadastrado com sucesso",
+        text: "Veiculo cadaastrado!",
+        icon: "success",
+        background: "#121826",
+        confirmButtonText: "Ok",
+        confirmButtonColor: "#ff751f",
+        color: "white",
+        iconColor: "#0d9c00"
+      })
     }
     catch (error) {
       console.log(error)
+ 
+      Swal.fire({
+              title: "Veiculo não editado",
+              text: "Problemas para editar o veiculo!",
+              icon: "error",
+              background: "#121826",
+              confirmButtonText: "Ok",
+              confirmButtonColor: "#ff751f",
+              color: "white",
+              iconColor: "#d30000"
+            })
     }
   }
 
@@ -116,60 +164,140 @@ const Veiculos = () => {
     setEditar(true)
   }
 
-  const funcPut = async() => {
-    try{
-      if(!imagem)
+  const funcPut = async () => {
+
+    if (valor.trim().length == 0) {
+          Swal.fire({
+            title: "Preencha os valores corretamente",
+            text: "O veiculo deve ser preenchido antes de ser editado!",
+            icon: "warning",
+            background: "#121826",
+            confirmButtonText: "Ok",
+            confirmButtonColor: "#ff751f",
+            color: "white",
+            iconColor: "#ff751f"
+          })
+    
+          return false
+    
+        }
+
+    try {
+      if (!imagem)
         return
-  
+
       const formData = new FormData()
 
       formData.append("Nome", valor)
       formData.append("Imagem", imagem)
       formData.append("idTipoVeiculo", tipoVeiculoSelecionado)
-        
+
       console.log(formData)
 
-       
-      if(!itemEditar)
+
+      if (!itemEditar)
         return
-         
+
       setEditar(true)
 
       const response = await api.put(`/Veiculo/${itemEditar.idVeiculo}`, formData)
       console.log(response)
       funcGet()
+
+      Swal.fire({
+        title: "Veiculo editado com sucesso",
+        text: "Veiculo editado!",
+        icon: "success",
+        background: "#121826",
+        confirmButtonText: "Ok",
+        confirmButtonColor: "#ff751f",
+        color: "white",
+        iconColor: "#0d9c00"
+      })
     }
-    catch(error){
+    catch (error) {
       console.log(error)
+
+      Swal.fire({
+        title: "Veiculo não foi editado",
+        text: "Problemas para editar o veiculo",
+        icon: "success",
+        background: "#121826",
+        confirmButtonText: "Ok",
+        confirmButtonColor: "#ff751f",
+        color: "white",
+        iconColor: "#d30000"
+      })
     }
   }
 
   //DELETE
 
-  const funcDelete = async(item: any) => {
-    try{
-      if(!item)
+  const funcDelete = async (item: any) => {
+    const result = await Swal.fire({
+      title: "Tem certeza que você deseja excluir o item?",
+      text: "Quer mesmo fazer isso?",
+      icon: "question",
+      background: "#121826",
+      confirmButtonColor: "#ff751f",
+      showCancelButton: true,
+      color: "white",
+      iconColor: "#525252",
+      confirmButtonText: "Confirmar Exclusão",
+      cancelButtonText: "Cancelar",
+    })
+
+    if (!result.isConfirmed) {
+      return;
+    }
+
+    try {
+      if (!item)
         return
 
       const response = await api.delete(`/Veiculo/${item.idVeiculo}`)
       console.log(response)
       funcGet()
+
+      Swal.fire({
+        title: "Veiculo deletado com sucesso",
+        text: "Veiculo deletado!",
+        icon: "success",
+        background: "#121826",
+        confirmButtonText: "Ok",
+        confirmButtonColor: "#ff751f",
+        color: "white",
+        iconColor: "#0d9c00"
+      })
     }
-    catch(error){
+    catch (error) {
       console.log(error)
+
+      Swal.fire({
+        title: "Veiculo não foi deletado",
+        text: "Problemas para deletar o veiculo",
+        icon: "success",
+        background: "#121826",
+        confirmButtonText: "Ok",
+        confirmButtonColor: "#ff751f",
+        color: "white",
+        iconColor: "#d30000"
+      })
     }
   }
 
 
-  const funcVazia = () => {
-    console.log("aaa")
+  const funcResumo = async (item: Veiculo) => {
+    //em construção
   }
+
+
 
   return (
     <>
-    <Header />
-    <Cadastrar
-  
+      <Header />
+      <Cadastrar
+
         funcCadastro={funcPost}
         funcCancelarEdicao={setEditar}
         funcEditar={funcPut}
@@ -197,6 +325,7 @@ const Veiculos = () => {
         funcEditar={funcPrePut}
         listaTipoVeiculo={listaTipoVeiculo}
         funcExcluir={funcDelete}
+        funcResumo={funcResumo}
       />
       <Footer />
     </>

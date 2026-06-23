@@ -52,7 +52,7 @@ const Cadastro = (props : CadastroProps) => {
                         />
                     </div>
                     <div className={`campo_cad_tipoVeiculo`} style={{ display: props.visibilidade }}>
-                        <label htmlFor="tipoVeiculo">Gênero</label>
+                        <label htmlFor="tipoVeiculo">Tipo</label>
                         <select value={props.tipoVeiculoSelecionado} onChange={(e) => props.settipoVeiculoSelecionado(e.target.value)}>
                             <option value="" disabled>Selecione</option>
                             {props.lista && props.lista.length > 0 ? (
